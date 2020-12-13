@@ -1,5 +1,5 @@
 import React from 'react'
-import {Card, Cascader, Tooltip, Icon, Form, Checkbox, Select, Input, Button, Col, Row, message, BackTop} from 'antd'
+import { Card, Cascader, Tooltip, Icon, Form, Checkbox, Select, Input, Button, Col, Row, message, BackTop } from 'antd'
 import CustomBreadcrumb from '../../../components/CustomBreadcrumb/index'
 import TypingCard from '../../../components/TypingCard'
 
@@ -90,25 +90,25 @@ class FormDemo1 extends React.Component {
         message.warning('请先填写正确的表单')
       } else {
         message.success('提交成功')
-        // console.log(values)
+        console.log(values)
       }
     });
   }
 
-  componentWillUnmount() {
+  componentWillUnmount () {
     clearInterval(this.timer)
   }
 
-  render() {
-    const {getFieldDecorator, getFieldValue} = this.props.form
+  render () {
+    const { getFieldDecorator, getFieldValue } = this.props.form
     const formItemLayout = {
       labelCol: {
-        xs: {span: 24},
-        sm: {span: 4},
+        xs: { span: 24 },
+        sm: { span: 4 },
       },
       wrapperCol: {
-        xs: {span: 24},
-        sm: {span: 12},
+        xs: { span: 24 },
+        sm: { span: 12 },
       },
     };
     const tailFormItemLayout = {
@@ -126,7 +126,7 @@ class FormDemo1 extends React.Component {
     const prefixSelector = getFieldDecorator('prefix', {
       initialValue: 86,
     })(
-      <Select style={{width: 70}}>
+      <Select style={{ width: 70 }}>
         <Option value={86}>+86</Option>
         <Option value={87}>+87</Option>
       </Select>
@@ -134,10 +134,10 @@ class FormDemo1 extends React.Component {
     const cardContent = '表单页用于向用户收集或验证信息，基础表单常见于数据项较少的表单场景'
     return (
       <div>
-        <CustomBreadcrumb arr={['输入', '表单', '基础表单']}/>
-        <TypingCard source={cardContent}/>
+        <CustomBreadcrumb arr={['输入', '表单', '基础表单']} />
+        <TypingCard source={cardContent} />
         <Card bordered={false} title='基础表单'>
-          <Form layout='horizontal' style={{width: '70%', margin: '0 auto'}} onSubmit={this.handleSubmit}>
+          <Form layout='horizontal' style={{ width: '70%', margin: '0 auto' }} onSubmit={this.handleSubmit}>
             <FormItem label='邮箱' {...formItemLayout}>
               {
                 getFieldDecorator('email', {
@@ -152,7 +152,7 @@ class FormDemo1 extends React.Component {
                     }
                   ]
                 })(
-                  <Input/>
+                  <Input />
                 )
               }
             </FormItem>
@@ -178,7 +178,7 @@ class FormDemo1 extends React.Component {
                     }
                   ]
                 })(
-                  <Input type='password'/>
+                  <Input type='password' />
                 )
               }
             </FormItem>
@@ -188,7 +188,7 @@ class FormDemo1 extends React.Component {
                   rules: [
                     {
                       validator: (rule, value, callback) => {
-                        const {getFieldValue} = this.props.form
+                        const { getFieldValue } = this.props.form
                         if (!getFieldValue('password')) {
                           callback('请先输入上面的密码！')
                         }
@@ -200,7 +200,7 @@ class FormDemo1 extends React.Component {
                     }
                   ]
                 })(
-                  <Input type='password'/>
+                  <Input type='password' />
                 )
               }
             </FormItem>
@@ -208,7 +208,7 @@ class FormDemo1 extends React.Component {
               <span>
                 昵称&nbsp;
                 <Tooltip title='请输入您的昵称'>
-                  <Icon type='question-circle-o'/>
+                  <Icon type='question-circle-o' />
                 </Tooltip>
               </span>
             )}>
@@ -216,7 +216,7 @@ class FormDemo1 extends React.Component {
                 getFieldDecorator('nickname', {
                   rules: []
                 })(
-                  <Input/>
+                  <Input />
                 )
               }
             </FormItem>
@@ -231,7 +231,7 @@ class FormDemo1 extends React.Component {
                     }
                   ]
                 })(
-                  <Cascader options={options} expandTrigger="hover" placeholder=''/>
+                  <Cascader options={options} expandTrigger="hover" placeholder='' />
                 )
               }
             </FormItem>
@@ -247,7 +247,7 @@ class FormDemo1 extends React.Component {
                     }
                   ]
                 })(
-                  <Input addonBefore={prefixSelector}/>
+                  <Input addonBefore={prefixSelector} />
                 )
               }
             </FormItem>
@@ -261,17 +261,17 @@ class FormDemo1 extends React.Component {
                     }
                   ]
                 })(
-                  <Input/>
+                  <Input />
                 )
               }
             </FormItem>
-            <FormItem{...formItemLayout} label="验证码">
+            <FormItem {...formItemLayout} label="验证码">
               <Row gutter={8}>
                 <Col span={12}>
                   {getFieldDecorator('captcha', {
-                    rules: [{required: true, message: '请输入验证码！'}],
+                    rules: [{ required: true, message: '请输入验证码！' }],
                   })(
-                    <Input/>
+                    <Input />
                   )}
                 </Col>
                 <Col span={12}>
@@ -286,12 +286,12 @@ class FormDemo1 extends React.Component {
                 <Checkbox>我已阅读并同意<a>协议</a></Checkbox>
               )}
             </FormItem>
-            <FormItem style={{textAlign: 'center'}} {...tailFormItemLayout}>
+            <FormItem style={{ textAlign: 'center' }} {...tailFormItemLayout}>
               <Button type="primary" htmlType="submit" disabled={!getFieldValue('agreement')}>提交</Button>
             </FormItem>
           </Form>
         </Card>
-        <BackTop visibilityHeight={200} style={{right: 50}}/>
+        <BackTop visibilityHeight={200} style={{ right: 50 }} />
       </div>
     )
   }

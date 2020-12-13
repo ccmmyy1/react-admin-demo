@@ -17,6 +17,7 @@ const StepsDemo = LoadableComponent(()=>import('../../routes/Navigation/StepsDem
 //输入组件Demo
 const FormDemo1 = LoadableComponent(()=>import('../../routes/Entry/FormDemo/FormDemo1'))
 const FormDemo2 = LoadableComponent(()=>import('../../routes/Entry/FormDemo/FormDemo2'))
+const FormDemo3 = LoadableComponent(()=>import('../../routes/Entry/FormDemo/FormDemo3'))
 const UploadDemo = LoadableComponent(()=>import('../../routes/Entry/UploadDemo/index'))
 
 //显示组件Demo
@@ -25,6 +26,7 @@ const CollapseDemo = LoadableComponent(()=>import('../../routes/Display/Collapse
 const ListDemo = LoadableComponent(()=>import('../../routes/Display/ListDemo/index'))
 const TableDemo = LoadableComponent(()=>import('../../routes/Display/TableDemo/index'))
 const TabsDemo = LoadableComponent(()=>import('../../routes/Display/TabsDemo/index'))
+const VideoDemo = LoadableComponent(()=>import('../../routes/Display/VideoDemo/index'))
 
 //反馈组件Demo
 const SpinDemo = LoadableComponent(()=>import('../../routes/Feedback/SpinDemo/index'))
@@ -60,6 +62,7 @@ class ContentMain extends React.Component {
 
           <PrivateRoute exact path='/home/entry/form/basic-form' component={FormDemo1}/>
           <PrivateRoute exact path='/home/entry/form/step-form' component={FormDemo2}/>
+          <PrivateRoute exact path='/home/entry/form/form' component={FormDemo3}/>
           <PrivateRoute exact path='/home/entry/upload' component={UploadDemo}/>
 
           <PrivateRoute exact path='/home/display/carousel' component={CarouselDemo}/>
@@ -67,6 +70,7 @@ class ContentMain extends React.Component {
           <PrivateRoute exact path='/home/display/list' component={ListDemo}/>
           <PrivateRoute exact path='/home/display/table' component={TableDemo}/>
           <PrivateRoute exact path='/home/display/tabs' component={TabsDemo}/>
+          <PrivateRoute exact path='/home/display/video' component={VideoDemo}/>
 
           <PrivateRoute exact path='/home/feedback/modal' component={ModalDemo}/>
           <PrivateRoute exact path='/home/feedback/notification' component={NotificationDemo}/>
