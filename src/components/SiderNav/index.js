@@ -41,7 +41,8 @@ const menus = [
           { key: '/home/entry/form/form', title: '基础表单', icon: '' },
         ]
       },
-      { key: '/home/entry/upload', title: '上传', icon: '' },
+      // { key: '/home/entry/upload', title: '上传', icon: '' },
+      { key: '/home/entry/uploademo', title: '上传', icon: '' },
     ]
   },
   {
@@ -50,9 +51,10 @@ const menus = [
     key: '/home/display',
     subs: [
       { key: '/home/display/carousel', title: '轮播图', icon: '' },
-      { key: '/home/display/collapse', title: '折叠面板', icon: '' },
-      { key: '/home/display/list', title: '列表', icon: '' },
+      // { key: '/home/display/collapse', title: '折叠面板', icon: '' },
+      // { key: '/home/display/list', title: '列表', icon: '' },
       { key: '/home/display/table', title: '表格', icon: '' },
+      { key: '/home/display/table1', title: '表格', icon: '' },
       { key: '/home/display/tabs', title: '标签页', icon: '', },
       { key: '/home/display/video', title: '音频视频', icon: '', },
     ]
