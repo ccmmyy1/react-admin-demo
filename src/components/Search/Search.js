@@ -51,7 +51,6 @@ class Search extends React.Component {
         <Input ref='searchInput' style={{ width: '50%' }} defaultValue={keyword} />
         <Button type='primary' onClick={this.handleSearch} ><Icon type='search' />搜索</Button>
       </Input.Group>
-
     )
   }
 }

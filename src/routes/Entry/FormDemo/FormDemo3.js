@@ -7,9 +7,8 @@
  * @anthor 
  * @date 2020-12-11
  */
-import { Card, Cascader, Col, Input, message } from 'antd';
 import React from 'react';
-import { Form, Checkbox, Button, BackTop, Row } from 'antd';
+import { Card, Cascader, Col, Row, Input, message, Form, Button, Checkbox, BackTop } from 'antd';
 import cityData from '../../../utils/CityCode';
 // 由于使用antdv3得用getFieldDecorator,因而不能使用函数组件
 let sortCityList = [];
@@ -34,14 +33,14 @@ for (let i in cityData) {
 class FormDemo3 extends React.Component {
   state = {
     count: 60,
-    text: "获取验证码",
+    text: '获取验证码',
     disabled: false,
   }
   // 验证码倒计时
   countdown = (e) => {
     const timer = setInterval(() => {
       this.setState({
-        text: this.state.count + "s",
+        text: this.state.count + 's',
         count: this.state.count - 1,
         disabled: true
       }, () => {
@@ -49,7 +48,7 @@ class FormDemo3 extends React.Component {
           clearInterval(timer)
           this.setState({
             count: 60,
-            text: "获取验证码",
+            text: '获取验证码',
             disabled: false
           })
         }

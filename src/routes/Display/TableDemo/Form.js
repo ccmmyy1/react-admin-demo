@@ -197,8 +197,6 @@ class FormLayout extends React.Component {
             )
           }
         </Form.Item>
-
-
         <Form.Item label='地址' hasFeedback {...formItemLayout}>
           {
             getFieldDecorator('residence', {
@@ -240,7 +238,6 @@ class FormLayout extends React.Component {
           <Button type="primary" htmlType="submit" >提交</Button>
         </Form.Item>
       </Form>
-
     )
   }
 }
